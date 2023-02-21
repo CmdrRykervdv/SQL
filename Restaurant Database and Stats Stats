@@ -1,0 +1,34 @@
+Create a Restaurant Database
+
+CREATE TABLE Restaurant (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, amount_sold INTEGER);
+
+INSERT INTO Restaurant VALUES (1, "Ramen", 10, 25);
+INSERT INTO Restaurant VALUES (2, "Chicken Katsu", 15, 15);
+INSERT INTO Restaurant VALUES (3, "Onigiri", 3, 30);
+INSERT INTO Restaurant VALUES (4, "Udon", 8, 16);
+INSERT INTO Restaurant VALUES (5, "Yakisoba", 8, 11);
+INSERT INTO Restaurant VALUES (6, "Melon Pan", 3, 20);
+INSERT INTO Restaurant VALUES (7, "Curry", 6, 18);
+INSERT INTO Restaurant VALUES (8, "Rice", 2, 100);
+INSERT INTO Restaurant VALUES (9, "Green Tea", 1, 50);
+INSERT INTO Restaurant VALUES (10, "Ice Cream", 5, 30);
+
+--Display the database order by amount sold
+
+SELECT * FROM Restaurant
+ORDER BY amount_sold
+
+--What is the total amount of items sold?
+
+SELECT * FROM Restaurant
+ORDER BY amount_sold;
+
+SELECT SUM(amount_sold) "Total amount sold"
+FROM Restaurant;
+
+--What are the top 3 most purchased items?
+
+SELECT item, price, amount_sold
+FROM Restaurant
+ORDER BY amount_sold <30
+limit 3;
