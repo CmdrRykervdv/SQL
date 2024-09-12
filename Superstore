@@ -43,3 +43,18 @@ WHERE category="Electronics";
 SELECT item_name, price
 FROM superstore
 ORDER BY price desc;
+
+SELECT price, item_name
+FROM superstore
+ORDER BY price;
+
+SELECT AVG(price), item_name
+FROM superstore
+GROUP BY item_name
+ORDER BY AVG(price) DESC;
+
+SELECT AVG(price), item_name
+FROM superstore
+WHERE category = 'Kitchen Supplies'
+GROUP BY  item_name
+ORDER BY AVG(price) DESC;
